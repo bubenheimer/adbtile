@@ -1,0 +1,9 @@
+<resources>
+    <style name="ADBTileTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

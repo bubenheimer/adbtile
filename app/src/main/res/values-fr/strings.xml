@@ -1,0 +1,10 @@
+<resources>
+    <string name="adbtile">Geste ADB</string>
+    <string name="permission_request_title">Autorisations</string>
+    <string name="write_secure_settings_permission_msg">Pour que cette application fonctionne, elle a besoin de l\'autorisation \"WRITE_SECURE_SETTINGS\". Malheureusement, cela n\'est possible qu\'à partir d\'un \"shell adb\" depuis votre ordinateur :\n\nadb shell pm grant %s android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="write_secure_settings_permission">Autorisation \"WRITE_SECURE_SETTINGS\"</string>
+    <string name="not_granted">Non accordée</string>
+    <string name="permissions">Autorisations</string>
+    <string name="granted">Accordée</string>
+    <string name="source_code_title">Code source</string>
+</resources>

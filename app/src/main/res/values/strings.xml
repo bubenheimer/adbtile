@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">ADB Tile</string>
+    <string name="pref_write_secure_settings" translatable="false">write_secure_settings</string>
+    <string name="source_url" translatable="false">https://goo.gl/vor5ig</string>
+    <string name="adbtile">USB Debug</string>
+    <string name="permission_request_title">Permission request</string>
+    <string name="write_secure_settings_permission_msg">For this app to work it needs WRITE_SECURE_SETTINGS permission to be granted. Unfortunately that is only possible through adb shell from your computer:\n\nadb shell pm grant %s android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="write_secure_settings_permission">android.permission.WRITE_SECURE_SETTINGS</string>
+    <string name="not_granted">Not granted</string>
+    <string name="permissions">Permissions</string>
+    <string name="granted">Granted</string>
+    <string name="source_code_title">Source code</string>
+</resources>
