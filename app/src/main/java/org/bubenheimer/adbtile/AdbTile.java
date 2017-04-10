@@ -14,19 +14,16 @@ public final class AdbTile extends TileService {
 
     @Override
     public void onClick() {
-        if (!Utils.isWriteSecureSettingsPermissionGranted(this)) {
-            unlockAndRun(new Runnable() {
-                @Override
-                public void run() {
-                    showDialog(Utils.getPermissionsReminderDialog(AdbTile.this));
-                }
-            });
-        } else {
-            final Tile qsTile = getQsTile();
-            final boolean enable = qsTile.getState() == Tile.STATE_INACTIVE;
-            setState(enable);
-            setAdbEnabled(enable);
-        }
+        unlockAndRun(() -> {
+            if (!Utils.isWriteSecureSettingsPermissionGranted(this)) {
+                showDialog(Utils.getPermissionsReminderDialog(AdbTile.this));
+            } else {
+                final Tile qsTile = getQsTile();
+                final boolean enable = qsTile.getState() == Tile.STATE_INACTIVE;
+                setState(enable);
+                setAdbEnabled(enable);
+            }
+        });
     }
 
     private void setState(final boolean enabled) {
@@ -36,10 +33,10 @@ public final class AdbTile extends TileService {
     }
 
     private boolean isAdbEnabled() {
-        return Settings.Secure.getInt(getContentResolver(), ADB_ENABLED, 0) != 0;
+        return Settings.Global.getInt(getContentResolver(), ADB_ENABLED, 0) != 0;
     }
 
     private void setAdbEnabled(final boolean enabled) {
-        Settings.Secure.putInt(getContentResolver(), ADB_ENABLED, enabled ? 1 : 0);
+        Settings.Global.putInt(getContentResolver(), ADB_ENABLED, enabled ? 1 : 0);
     }
 }
