@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 27
 
     defaultConfig {
-        applicationId "org.bubenheimer.adbtile"
+        applicationId 'org.bubenheimer.adbtile'
         minSdkVersion 24
-        targetSdkVersion 25
-        versionName "1.1"
+        targetSdkVersion 27
+        versionName '1.1'
         versionCode 2
     }
 
