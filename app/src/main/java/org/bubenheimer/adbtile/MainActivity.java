@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.widget.Toolbar;
 
 import static org.bubenheimer.adbtile.Utils.isWriteSecureSettingsPermissionGranted;
 
@@ -14,7 +13,7 @@ public final class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setActionBar((Toolbar) findViewById(R.id.toolbar));
+        setActionBar(findViewById(R.id.toolbar));
 
         getFragmentManager()
                 .beginTransaction()
