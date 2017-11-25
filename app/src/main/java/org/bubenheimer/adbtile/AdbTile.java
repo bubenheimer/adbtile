@@ -1,5 +1,6 @@
 package org.bubenheimer.adbtile;
 
+import android.graphics.drawable.Icon;
 import android.provider.Settings;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
@@ -29,6 +30,12 @@ public final class AdbTile extends TileService {
     private void setState(final boolean enabled) {
         final Tile qsTile = getQsTile();
         qsTile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        // The next line should not be necessary, but
+        // LineageOS 14.1 does not handle setState by itself properly; it only shows a change
+        // if the icon changes, too. The two icons below are identical.
+        qsTile.setIcon(enabled ?
+                Icon.createWithResource(this, R.drawable.ic_adb_vector) :
+                Icon.createWithResource(this, R.drawable.ic_adb_vector_copy));
         qsTile.updateTile();
     }
 
