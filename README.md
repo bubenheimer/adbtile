@@ -10,7 +10,7 @@ To provide the permissions, use the adb command as below after the app has insta
 
     adb shell grant org.bubenheimer.adbtile android.permission.SECURE_SETTINGS
 
-This app is forked from another quick settings tile app from Francesco Franco, Demo Mode Tile, which he kindly offered as open source. Many thanks to him for showing how it's done.
+This app is forked from another quick settings tile app from Francesco Franco, Demo Mode Tile, which he kindly made available as open source. Many thanks to him for showing how it's done.
 
 Quick settings tiles are available in Android Nougat (7.0) and later. This app will not work in earlier Android versions.
 

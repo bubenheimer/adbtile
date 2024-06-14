@@ -1,0 +1,17 @@
+[versions]
+
+android-plugin = '8.5.0'
+
+android-sdk-compile = '34'
+android-sdk-min = '24'
+android-sdk-target = '34'
+
+java = '11'
+
+
+[libraries]
+
+
+[plugins]
+
+android-application = { id = 'com.android.application', version.ref = 'android-plugin' }

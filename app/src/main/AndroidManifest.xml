@@ -1,11 +1,12 @@
 <manifest
-    package="org.bubenheimer.adbtile"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
-        tools:ignore="ProtectedPermissions"/>
+        tools:ignore="ProtectedPermissions"
+        />
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,7 @@
 
         <activity
             android:name="org.bubenheimer.adbtile.MainActivity"
+            android:exported="true"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,9 +29,11 @@
 
         <service
             android:name="org.bubenheimer.adbtile.AdbTile"
+            android:exported="true"
             android:icon="@drawable/ic_adb_vector"
             android:label="@string/adbtile"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            >
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
