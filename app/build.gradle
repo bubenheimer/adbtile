@@ -18,6 +18,12 @@ android {
         versionCode 5
     }
 
+    signingConfigs {
+        release {
+            readKeystoreProperties('release')
+        }
+    }
+
     compileOptions {
         sourceCompatibility libs.versions.java.get()
         targetCompatibility libs.versions.java.get()
@@ -30,6 +36,7 @@ android {
             renderscriptDebuggable false
             minifyEnabled true
             shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -38,5 +45,18 @@ android {
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+}
+
+def readKeystoreProperties(def configName) {
+    def propsFile = file('file:///' + KEYSTORE_PROPERTIES_FILE)
+
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        android.signingConfigs[configName].storeFile = file(props['storeFile'])
+        android.signingConfigs[configName].storePassword = props['storePassword']
+        android.signingConfigs[configName].keyAlias = props['keyAlias']
+        android.signingConfigs[configName].keyPassword = props['keyPassword']
     }
 }
