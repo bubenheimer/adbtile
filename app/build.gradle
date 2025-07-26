@@ -15,7 +15,7 @@ android {
         minSdkVersion libs.versions.android.sdk.min.get()
         targetSdkVersion libs.versions.android.sdk.target.get()
         versionName '1.3'
-        versionCode 6
+        versionCode 7
     }
 
     signingConfigs {
