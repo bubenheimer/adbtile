@@ -1,12 +1,13 @@
 [versions]
 
-android-plugin = '8.11.1'
+android-plugin = '9.1.0'
 
-android-sdk-compile = '36'
+android-sdk-compile = '37'
 android-sdk-min = '24'
-android-sdk-target = '36'
+android-sdk-target = '37'
 
-java = '11'
+java-android = '11'
+java-toolchain = '21'
 
 
 [libraries]

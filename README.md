@@ -1,10 +1,10 @@
 # ADB Tile
 
-ADB Tile provides an Android Quick Settings Tile to enable and disable Android USB debugging.
+ADB Tile provides an Android Quick Settings Tile to easily enable and disable Android USB debugging.
 
-ADB Tile makes it easy to enable and disable USB debugging, and the tile also helps with not forgetting to disable USB debugging after a debugging session is done to keep the phone secure.
+The tile also helps with not forgetting to disable USB debugging after a debugging session is done to keep the phone secure.
 
-It is necessary to manually give the app the permission to read secure system settings. The permission will survive reboots. This is needed to access the USB debugging setting. The app does not require a rooted phone.
+It is necessary to manually give the app the permission to read secure system settings. The permission will survive reboots. This is needed to access the USB debugging setting. It does not require a rooted phone.
 
 To provide the permissions, use the adb command as below after the app has installed.
 

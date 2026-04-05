@@ -12,4 +12,6 @@ dependencyResolutionManagement {
     }
 }
 
-include ':app'
+rootProject.name = "adbtile"
+
+include(":app")
